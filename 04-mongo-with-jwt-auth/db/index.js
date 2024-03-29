@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://abhishekgupta87984:abhi3456@cluster0.h0neeya.mongodb.net/hello');
+mongoose.connect(process.env.MONGO_URL);
 
 // Define schemas
 const AdminSchema = new mongoose.Schema({
